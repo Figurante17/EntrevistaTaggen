@@ -1,0 +1,198 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 500px;
+}
+
+fieldset {
+    /* min-width: 2px; */
+    padding: 10px 0 15px 15px;
+    margin: 0;
+    margin-bottom: 25px;
+    border: 1px solid #c5c5c5;
+}
+
+legend {
+    display: block;
+     width: auto; 
+    padding: 5px;
+    /* margin-bottom: 20px; */
+    /* font-size: 21px; */
+    line-height: inherit;
+    color: #333;
+    border-color: #808080;
+    border-bottom: none; 
+    margin-bottom:0;
+}
+
+.form_field {
+    padding: 0px 0px 0px 60px;
+}
+
+.btnPesquisa {
+    padding: 25px 0 0 0;
+}
+
+.btnPadrao {
+    min-width: 210px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.btnAzul {
+    color: #fff;
+    background-color: #3e5db5;
+}
+    .btnAzul:hover {
+        color: #fff;
+        background-color: #2b56ce;
+    }
+
+
+.linkPadrao {
+    min-width: 210px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.linkVerde, .btnVerde {
+    background-color: #3fc53f;
+    color: #fff;
+}
+
+
+.linkVerde:hover, .btnVerde:hover {      
+    color: #fff;
+    text-decoration: none;
+    background-color: #2edc2e;
+}
+
+    .linkVerde:active, .linkVerde:focus, .linkVerde:visited {
+        color: #fff;
+        text-decoration: none;
+    }
+
+divListRestaurantes{
+    padding:100px;
+}
+
+.linkEdit {
+    background: url(../Imagens/icon16.png) no-repeat left;
+    padding-left: 20px;
+}
+
+.linkDelete {
+    background: url(../Imagens/icon16Delete.png) no-repeat left;
+    padding-left: 20px;
+}
+
+    .linkDelete:hover {
+        cursor: pointer;
+    }
+
+.btnVermelho {
+    color: #fff;
+    background-color: #d63535;
+}
+
+.btnVermelho:hover {
+    color: #fff;
+    background-color: #e81a1a;
+}
+
+.form-separator input{
+    padding: 90px;
+}
+
+.form-group{
+    margin-bottom: 15px;
+}
+
+main {
+    background: white;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    resize: both;
+    overflow: auto;
+}
+
+   main div {
+        text-align: center;
+        color: white;
+        width: 100%;
+        padding: 20px;
+        resize: both;
+        overflow: auto;
+    }
+
+#imgHome{
+    width: 70%;
+}
+
+#labelHome {
+    color: #333;
+    font-size: 26px;
+    padding: 10px;
+}

@@ -1,0 +1,48 @@
+﻿@model IEnumerable<RestauranteTaggen.Models.Restaurante>
+
+@{
+    /**/
+
+    ViewBag.Title = "Restaurantes";
+}
+
+<div class="modal fade bootstrapmodal" id="modal">
+
+
+
+
+</div>
+<h2>Restaurantes</h2>
+@using (Ajax.BeginForm("Index", "Restaurantes", new AjaxOptions { HttpMethod = "Get", InsertionMode = InsertionMode.Replace, UpdateTargetId = "divListRestaurantes" }))
+{
+    <fieldset>
+        <legend>Filtros</legend>
+        <div class="form_field">
+            @Html.Label("Nome")
+            @Html.TextBox("pesquisa", null, new { @class = "form-control" })
+
+            <div class="form-group">
+                <div class="btnPesquisa">
+                    <input id="Submit" type="submit" value="Pesquisar" class="btnPadrao btnAzul" />
+                    @Html.ActionLink("Cadastrar novo restaurante", "Create", new { id = "" }, new { @class = "linkPadrao linkVerde" })
+                </div>
+            </div>
+        </div>
+    </fieldset>
+
+}
+@Html.Partial("_Restaurantes", Model)
+
+@section Scripts{
+    <script>
+        $(function () {
+            $(".delete").click(function () {
+                var id = $(this).attr("data-id");
+                $("#modal").load("Delete?id=" + id, function () {
+                    $("#modal").modal();
+                })
+            });
+        })
+    </script>
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,33 @@
+﻿@model IEnumerable<RestauranteTaggen.Models.Restaurante>
+
+<div id="divListRestaurantes">
+    <table class="table table-striped">
+        <tr>
+            <th width="7%" style="text-align:center">
+            Apagar
+            </th>
+            <th width="7%" style="text-align:center">
+             Excluir 
+            </th>
+            <th width="86%" >
+                Restaurantes
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td width="7%" style="text-align:center">
+                <a  class="linkDelete" onclick="MensagemConfirma('Atenção','Deseja excluir registro ?','@Url.Action("Delete", "Restaurantes", new { id = item.codigo })')"></a>
+            </td>
+            <td width="7%" style="text-align:center">
+                @Html.ActionLink(" ", "Create", new { id = item.codigo }, new { @class = "linkEdit" })
+            </td>
+            <td width="86%">
+                @Html.DisplayFor(modelItem => item.nome)
+            </td>
+        </tr>
+        }
+
+    </table>
+</div>

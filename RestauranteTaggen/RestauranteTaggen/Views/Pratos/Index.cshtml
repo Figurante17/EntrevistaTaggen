@@ -1,0 +1,52 @@
+﻿@model IEnumerable<RestauranteTaggen.Models.PratosViewModel>
+
+@{
+    ViewBag.Title = "Pratos";
+}
+
+<h2>Pratos</h2>
+
+<p>
+    @Html.ActionLink("Novo Prato", "Create", null , new { @class = "linkPadrao linkVerde" })
+</p>
+<table class="table table-striped">
+    <tr>
+        <th width="7%" style="text-align:center">
+            Apagar
+        </th>
+        <th width="7%" style="text-align:center">
+            Excluir
+        </th>
+        <th width="40%" >
+            Restaurante
+        </th>
+        <th width="36%" >
+            @Html.Label("Prato")
+        </th>
+        <th width="10%" >
+            @Html.DisplayNameFor(model => model.Preco)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td width="7%" style="text-align:center">
+            @Html.ActionLink(" ", "Delete", new { id = item.CodigoPratos }, new { @class = "linkDelete" })
+        </td>
+        <td width="7%" style="text-align:center">
+            @Html.ActionLink(" ", "Create", new { id = item.CodigoPratos, idRestaurante = item.IdRestaurante }, new { @class = "linkEdit" })
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomeRestaurante)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomePrato)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Preco)
+        </td>
+    </tr>
+}
+
+</table>
